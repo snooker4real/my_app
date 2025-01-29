@@ -21,11 +21,10 @@ class AuthController extends Controller
         // Register
         $user = User::create($fields);
 
-        dd('ok');
         // Login
         Auth::login($user);
         //Register
-        return redirect()->route('home');
+        return redirect()->route('/');
     }
 
     public function login(Request $request)
